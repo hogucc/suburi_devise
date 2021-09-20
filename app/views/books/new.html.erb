@@ -1,0 +1,18 @@
+<h1>本の登録</h1>
+
+<%= form_with(model: @book, local: true) do |form| %>
+  <% if @book.errors.any? %>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+
+  <%= form.submit %>
+<% end %>
+
+<%= link_to '本の一覧', books_path %>

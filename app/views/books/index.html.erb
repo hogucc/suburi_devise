@@ -1,0 +1,7 @@
+<h1>本の一覧</h1>
+
+<% @books.each do |book| %>
+  <br><%= book.title %></br>
+<% end %>
+
+<%= link_to '本の登録', new_book_path %>
